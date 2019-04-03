@@ -16,13 +16,13 @@ spec:
         prefix: /
     route:
     - destination:
-        host: "{{ .Values.service.name }}.{{ .Values.service.namespace }}.svc.cluster.local"
+        host: "{{ .Values.service.name }}.{{ .Release.Namespace }}.svc.cluster.local"
         subset: stable
         port:
           number: {{ .Values.service.port }}
       weight: 90
     - destination:
-        host: "{{ .Values.service.name }}.{{ .Values.service.namespace }}.svc.cluster.local"
+        host: "{{ .Values.service.name }}.{{ .Release.Namespace }}.svc.cluster.local"
         subset: canary
         port:
           number: {{ .Values.service.port }}
