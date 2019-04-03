@@ -7,7 +7,7 @@ metadata:
     app: {{ .Values.service.name }}
 spec:
   gateways:
-  - {{ .Values.ingress }}
+  - {{ .Values.gateway }}
   hosts:
   - {{ .Values.service.dns }}
   http:
