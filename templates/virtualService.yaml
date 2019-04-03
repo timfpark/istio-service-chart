@@ -20,10 +20,10 @@ spec:
         subset: stable
         port:
           number: {{ .Values.service.port }}
-      weight: 90
+      weight: {{ .Values.stable.weight }}
     - destination:
         host: "{{ .Values.service.name }}.{{ .Release.Namespace }}.svc.cluster.local"
         subset: canary
         port:
           number: {{ .Values.service.port }}
-      weight: 10
+      weight: {{ .Values.canary.weight }}
