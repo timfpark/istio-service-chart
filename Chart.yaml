@@ -1,0 +1,8 @@
+name: service-chart
+description: Microservice service chart
+version: 0.1.0
+sources:
+- https://github.com/timfpark/istio-service-chart
+maintainers:
+- name: timfpark
+  email: timfpark@gmail.com
